@@ -32,19 +32,28 @@ footer {
 /* Estilo para los botones */
 .boton {
     margin: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 22px;
     background-color: rgba(75, 74, 74, 0.7);
     color: white;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
 }
 
 .boton:hover {
     background-color: rgba(0, 0, 0, 0.9);
 }
+
+/* Centrar los botones */
+.d-flex {
+    justify-content: center;
+    gap: 20px;
+}
+
 
 /* Espaciado para el contenido */
 .contenido {

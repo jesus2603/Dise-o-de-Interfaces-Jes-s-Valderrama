@@ -6,236 +6,144 @@
     <title>Página de Venta</title>
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Enlace a tu archivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="principal.html" class="btn btn-light">
-        <i class="fas fa-home"></i> Inicio
-    </a>
-    <a href="carrito.html" class="btn btn-light">
-        <i class="fas fa-home"></i> Carrito
-    </a>
-    <a href="hombre.html" class="btn btn-light">
-        <i class="fas fa-home"></i> Hombre
-    </a>
-    <!-- Header con foto -->
-    <header></header>
-   
+
+    <!-- Header con logo -->
+    <header class="text-center mb-4">
+        <img src="logo.png" alt="Logo de la tienda" class="img-fluid">
+    </header>
+
+    <!-- Botones debajo del logo -->
+    <div class="d-flex justify-content-center mb-4">
+        <a href="principal.html" class="btn btn-light mx-2">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="carrito.html" class="btn btn-light mx-2">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="hombre.html" class="btn btn-light mx-2">
+            <i class="fas fa-male"></i>
+        </a>
+    </div>
+
     <!-- Contenido principal -->
-    <div class="contenido">
-        <h1>Mujer</h1>
+    <div class="container">
+        <h1 class="text-center">Mujer</h1>
 
         <!-- Título de ofertas: Anillos -->
-        <h1 class="mt-5">Anillos</h1>
+        <h2 class="mt-5">Anillos</h2>
 
-        <!-- Cards (2 filas de 3) -->
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <!-- Card 1 -->
             <div class="col">
                 <div class="card">
-                    <img src="anilloM01.jpg" class="card-img-top" alt="Oferta 1">
+                    <img src="anilloM01.jpg" class="card-img-top" alt="Anillo 1">
                     <div class="card-body">
                         <h5 class="card-title">Anillo mujer 01</h5>
                         <p class="card-text">Solo talla 13, acero con diamante. <br>¡No te lo pierdas!</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 2 -->
             <div class="col">
                 <div class="card">
-                    <img src="anilloM02.jpg" class="card-img-top" alt="Oferta 2">
+                    <img src="anilloM02.jpg" class="card-img-top" alt="Anillo 2">
                     <div class="card-body">
                         <h5 class="card-title">Anillo mujer 02</h5>
                         <p class="card-text">Al 50% del precio actual. ¡Aprovecha esta oferta!</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
             <div class="col">
                 <div class="card">
-                    <img src="anilloM03.jpg" class="card-img-top" alt="Oferta 3">
+                    <img src="anilloM03.jpg" class="card-img-top" alt="Anillo 3">
                     <div class="card-body">
                         <h5 class="card-title">Anillo mujer 03</h5>
                         <p class="card-text">Corona de plata sin cadena. ¡Oferta limitada!</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col">
-                <div class="card">
-                    <img src="anilloM04.jpg" class="card-img-top" alt="Oferta 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Anillo mujer 04</h5>
-                        <p class="card-text">Consigue esta pieza al 50% por una compra de un anillo. ¡No te lo puedes perder!</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col">
-                <div class="card">
-                    <img src="anilloM05.jpg" class="card-img-top" alt="Oferta 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Anillo mujer 05</h5>
-                        <p class="card-text">Reloj de plata Visceroy. ¡Compra ahora!</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="col">
-                <div class="card">
-                    <img src="anilloM06.jpg" class="card-img-top" alt="Oferta 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Anillo mujer 06</h5>
-                        <p class="card-text">Llevatelo por la mitad <br> ¡Solo hoy!</p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Título de ofertas: Cadenas -->
-        <h1 class="mt-5">Cadenas</h1>
+        <h2 class="mt-5">Cadenas</h2>
 
-        <!-- Cards (2 filas de 3) -->
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <!-- Card 1 -->
             <div class="col">
                 <div class="card">
-                    <img src="collarM01.jpg" class="card-img-top" alt="Oferta 1">
+                    <img src="collarM01.jpg" class="card-img-top" alt="Cadena 1">
                     <div class="card-body">
                         <h5 class="card-title">Cadena mujer 01</h5>
                         <p class="card-text">Cadena de oro 18k. ¡Perfecta para cualquier ocasión!</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 2 -->
             <div class="col">
                 <div class="card">
-                    <img src="collarM02.jpg" class="card-img-top" alt="Oferta 2">
+                    <img src="collarM02.jpg" class="card-img-top" alt="Cadena 2">
                     <div class="card-body">
                         <h5 class="card-title">Cadena mujer 02</h5>
                         <p class="card-text">Plata esterlina, elegante y resistente. ¡Llévatela con descuento!</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
             <div class="col">
                 <div class="card">
-                    <img src="collarM03.jpg" class="card-img-top" alt="Oferta 3">
+                    <img src="collarM03.jpg" class="card-img-top" alt="Cadena 3">
                     <div class="card-body">
                         <h5 class="card-title">Cadena mujer 03</h5>
                         <p class="card-text">Diseño moderno, resistente y al mejor precio. ¡No lo dejes pasar!</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col">
-                <div class="card">
-                    <img src="collarM04.jpg" class="card-img-top" alt="Oferta 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadena mujer 04</h5>
-                        <p class="card-text">Oro dorado con acabado pulido. ¡Llévatela con envío gratis!</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col">
-                <div class="card">
-                    <img src="collarM05.jpg" class="card-img-top" alt="Oferta 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadena mujer 05</h5>
-                        <p class="card-text">Elegante cadena para mujer, acero inoxidable. ¡Compra ahora con descuento!</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="col">
-                <div class="card">
-                    <img src="collarM06.jpg" class="card-img-top" alt="Oferta 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadena mujer 06</h5>
-                        <p class="card-text">Diseño minimalista en oro rosa. ¡No te lo pierdas!</p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Título de ofertas: Relojes -->
-        <h1 class="mt-5">Relojes</h1>
+        <h2 class="mt-5">Relojes</h2>
 
-        <!-- Cards (2 filas de 3) -->
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <!-- Card 1 -->
             <div class="col">
                 <div class="card">
-                    <img src="relojM01.jpg" class="card-img-top" alt="Oferta 1">
+                    <img src="relojM01.jpg" class="card-img-top" alt="Reloj 1">
                     <div class="card-body">
                         <h5 class="card-title">Reloj mujer 01</h5>
                         <p class="card-text">Reloj de acero inoxidable, resistente y elegante.</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 2 -->
             <div class="col">
                 <div class="card">
-                    <img src="relojM02.jpg" class="card-img-top" alt="Oferta 2">
+                    <img src="relojM02.jpg" class="card-img-top" alt="Reloj 2">
                     <div class="card-body">
                         <h5 class="card-title">Reloj mujer 02</h5>
                         <p class="card-text">Diseño minimalista y elegante, perfecto para cualquier ocasión.</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
             <div class="col">
                 <div class="card">
-                    <img src="relojM03.jpg" class="card-img-top" alt="Oferta 3">
+                    <img src="relojM03.jpg" class="card-img-top" alt="Reloj 3">
                     <div class="card-body">
                         <h5 class="card-title">Reloj mujer 03</h5>
                         <p class="card-text">Elegante reloj de diseño clásico, ideal para eventos formales.</p>
                     </div>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col">
-                <div class="card">
-                    <img src="relojm04.jpg" class="card-img-top" alt="Oferta 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj mujer 04</h5>
-                        <p class="card-text">Con pantalla digital, moderno y fácil de usar.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col">
-                <div class="card">
-                    <img src="relojM05.jpg" class="card-img-top" alt="Oferta 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj mujer 05</h5>
-                        <p class="card-text">Reloj de lujo con incrustaciones de diamantes. ¡Hazte con él!</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="col">
-                <div class="card">
-                    <img src="relojM06.jpg" class="card-img-top" alt="Oferta 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj mujer 06</h5>
-                        <p class="card-text">Reloj con cronómetro y resistencia al agua. ¡Ideal para el deporte!</p>
-                    </div>
-                </div>
-            </div>
         </div>
-
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="text-center mt-5 p-3 bg-light">
         <p>&copy; 2025 Tienda Online. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Enlace a Bootstrap JS (y Popper.js) -->
+    <!-- Enlace a Bootstrap JS y Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
+
