@@ -3,147 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Venta</title>
-    <!-- Enlace a Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Enlace a FontAwesome para los iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Enlace a tu archivo CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header con logo -->
-    <header class="text-center mb-4">
-        <img src="logo.png" alt="Logo de la tienda" class="img-fluid">
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="principal.html">
+                <img src="logo.png" alt="Logo" style="width: 150px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-light" href="principal.html">Hombre</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="mujer.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="carrito.html"><i class="fas fa-shopping-cart"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Botones debajo del logo -->
-    <div class="d-flex justify-content-center mb-4">
-        <a href="principal.html" class="btn btn-light mx-2">
-            <i class="fas fa-home"></i>
-        </a>
-        <a href="carrito.html" class="btn btn-light mx-2">
-            <i class="fas fa-shopping-cart"></i>
-        </a>
-        <a href="hombre.html" class="btn btn-light mx-2">
-            <i class="fas fa-male"></i>
-        </a>
+    <!-- Parallax -->
+    <div class="parallax">
+        <h1>Bienvenidos a nuestra Tienda Online</h1>
     </div>
 
-    <!-- Contenido principal -->
-    <div class="container">
-        <h1 class="text-center">Mujer</h1>
+    <div class="container page-content">
+        <h2 class="section-title">Explora Nuestras Colecciones</h2>
 
-        <!-- Título de ofertas: Anillos -->
-        <h2 class="mt-5">Anillos</h2>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card">
-                    <img src="anilloM01.jpg" class="card-img-top" alt="Anillo 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Anillo mujer 01</h5>
-                        <p class="card-text">Solo talla 13, acero con diamante. <br>¡No te lo pierdas!</p>
+        <!-- Collares -->
+        <div class="product-category">
+            <h3>Collares</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="collar1.jpg" class="card-img-top" alt="Collar 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Collar Elegante</h5>
+                            <p class="card-text">$25.00</p>
+                            <button class="btn btn-primary">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="anilloM02.jpg" class="card-img-top" alt="Anillo 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Anillo mujer 02</h5>
-                        <p class="card-text">Al 50% del precio actual. ¡Aprovecha esta oferta!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="anilloM03.jpg" class="card-img-top" alt="Anillo 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Anillo mujer 03</h5>
-                        <p class="card-text">Corona de plata sin cadena. ¡Oferta limitada!</p>
-                    </div>
-                </div>
+                <!-- Agregar más productos aquí -->
             </div>
         </div>
 
-        <!-- Título de ofertas: Cadenas -->
-        <h2 class="mt-5">Cadenas</h2>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card">
-                    <img src="collarM01.jpg" class="card-img-top" alt="Cadena 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadena mujer 01</h5>
-                        <p class="card-text">Cadena de oro 18k. ¡Perfecta para cualquier ocasión!</p>
+        <!-- Relojes -->
+        <div class="product-category">
+            <h3>Relojes</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="reloj1.jpg" class="card-img-top" alt="Reloj 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Reloj de Pulsera</h5>
+                            <p class="card-text">$40.00</p>
+                            <button class="btn btn-primary">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="collarM02.jpg" class="card-img-top" alt="Cadena 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadena mujer 02</h5>
-                        <p class="card-text">Plata esterlina, elegante y resistente. ¡Llévatela con descuento!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="collarM03.jpg" class="card-img-top" alt="Cadena 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadena mujer 03</h5>
-                        <p class="card-text">Diseño moderno, resistente y al mejor precio. ¡No lo dejes pasar!</p>
-                    </div>
-                </div>
+                <!-- Agregar más productos aquí -->
             </div>
         </div>
 
-        <!-- Título de ofertas: Relojes -->
-        <h2 class="mt-5">Relojes</h2>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <div class="col">
-                <div class="card">
-                    <img src="relojM01.jpg" class="card-img-top" alt="Reloj 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj mujer 01</h5>
-                        <p class="card-text">Reloj de acero inoxidable, resistente y elegante.</p>
+        <!-- Anillos -->
+        <div class="product-category">
+            <h3>Anillos</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="anillo1.jpg" class="card-img-top" alt="Anillo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Anillo de Acero</h5>
+                            <p class="card-text">$35.00</p>
+                            <button class="btn btn-primary">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="relojM02.jpg" class="card-img-top" alt="Reloj 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj mujer 02</h5>
-                        <p class="card-text">Diseño minimalista y elegante, perfecto para cualquier ocasión.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="relojM03.jpg" class="card-img-top" alt="Reloj 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj mujer 03</h5>
-                        <p class="card-text">Elegante reloj de diseño clásico, ideal para eventos formales.</p>
-                    </div>
-                </div>
+                <!-- Agregar más productos aquí -->
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="text-center mt-5 p-3 bg-light">
+    <footer>
         <p>&copy; 2025 Tienda Online. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Enlace a Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

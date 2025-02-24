@@ -1,97 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Venta</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: rgb(66, 70, 73);
-            color: white;
-        }
-        .container-sm {
-            min-height: 100vh;
-        }
-        .product-img {
-            max-height: 150px;
-            object-fit: cover;
-        }
-        #cartDiv {
-            background: #444;
-            padding: 15px;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Carrito de Compra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1 class="text-center">Tienda Online</h1>
-    </header>
-    <div class="container-sm">
-        <h2>¿Qué quieres comprar?</h2>
-        <div class="mb-3">
-            <label for="categorySelect" class="form-label">Selecciona género:</label>
-            <select id="categorySelect" class="form-select" onchange="showCategories()">
-                <option value="select">-- Elige una opción --</option>
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-            </select>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="principal.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="hombre.html">Hombre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mujer.html">Mujer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="principal.html"><i class="fas fa-shopping-cart"></i> Inicio</a></li>
+                </ul>
+            </div>
         </div>
-        <div id="categoriesDiv" class="mt-3" style="display:none;">
-            <h3>Selecciona el tipo de producto</h3>
-            <button class="btn btn-primary me-2" onclick="selectCategory('anillo')">Anillo</button>
-            <button class="btn btn-primary me-2" onclick="selectCategory('cadena')">Cadena</button>
-            <button class="btn btn-primary" onclick="selectCategory('reloj')">Reloj</button>
+    </nav>
+
+    <!-- Contenido del Carrito -->
+    <div class="container" style="margin-top: 100px;">
+        <h2 class="section-title">Tu Carrito</h2>
+
+        <!-- Resumen del carrito -->
+        <div class="cart-summary">
+            <h4>Resumen de compra</h4>
+            <div id="cartItems"></div>
+            <p id="totalPrice">Total: $0.00</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#finalizarCompraModal">Finalizar compra</button>
         </div>
-        <div id="productsDiv" class="mt-5" style="display:none;">
-            <h3 id="categoryTitle">Selecciona tu producto</h3>
-            <div id="productsList" class="row row-cols-1 row-cols-md-3 g-4"></div>
-        </div>
-        <h2 class="mt-5">Carrito de compras</h2>
-        <div id="cartDiv">
-            <ul id="cart-list" class="list-group"></ul>
-            <p><strong>Total: $<span id="total-price">0.00</span></strong></p>
-            <button class="btn btn-success" onclick="checkout()">Finalizar compra</button>
-        </div>
-    </div>
-    <script>
-        let cart = [];
-        let total = 0;
-        function showCategories() {
-            document.getElementById('categoriesDiv').style.display = 'block';
-        }
-        function selectCategory(category) {
-            document.getElementById('productsDiv').style.display = 'block';
-            document.getElementById('productsList').innerHTML = `
-                <div class="col">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top product-img">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto ${category}</h5>
-                            <p class="card-text">$50</p>
-                            <button class="btn btn-primary" onclick="addToCart('Producto ${category}', 50)">Añadir</button>
+
+        <!-- Modal para Finalizar Compra -->
+        <div class="modal fade" id="finalizarCompraModal" tabindex="-1" aria-labelledby="finalizarCompraModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="finalizarCompraModalLabel">Formulario de Compra</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Formulario de compra -->
+                        <form id="formularioCompra">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidos" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">Dirección de entrega</label>
+                                <input type="text" class="form-control" id="direccion" name="direccion" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cuenta" class="form-label">Número de cuenta</label>
+                                <input type="text" class="form-control" id="cuenta" name="cuenta" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="finalizarCompra()">Enviar pedido</button>
+                        </form>
+
+                        <!-- Mensaje de éxito -->
+                        <div id="mensajeExito" style="display: none;">
+                            <p class="alert alert-success">Compra realizada con éxito. ¡Gracias por tu compra!</p>
                         </div>
                     </div>
-                </div>`;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p>&copy; 2025 SilverChainz. Todos los derechos reservados.</p>
+        <div class="contact-info">
+            <p>Correo: <a href="mailto:SilverChainz@gmail.com" class="text-white">SilverChainz@gmail.com</a></p>
+            <p>Número de contacto: +34 633039342</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para cargar los productos del carrito
+        window.onload = function () {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cartItems');
+            let totalPrice = 0;
+
+            // Mostrar los productos en el carrito
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <p>${item.name} - $${item.price}</p>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+                totalPrice += item.price;
+            });
+
+            // Actualizar el total
+            document.getElementById('totalPrice').textContent = `$${totalPrice.toFixed(2)}`;
         }
-        function addToCart(name, price) {
-            cart.push({ name, price });
-            total += price;
-            updateCart();
-        }
-        function updateCart() {
-            document.getElementById('cart-list').innerHTML = cart.map(item => `<li class="list-group-item">${item.name} - $${item.price}</li>`).join('');
-            document.getElementById('total-price').textContent = total.toFixed(2);
-        }
-        function checkout() {
-            alert("Compra realizada exitosamente");
-            cart = [];
-            total = 0;
-            updateCart();
+
+        // Función para finalizar la compra
+        function finalizarCompra() {
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const apellidos = document.getElementById('apellidos').value;
+            const direccion = document.getElementById('direccion').value;
+            const cuenta = document.getElementById('cuenta').value;
+
+            // Validar que los campos no estén vacíos
+            if (nombre && apellidos && direccion && cuenta) {
+                // Limpiar el carrito (localStorage)
+                localStorage.removeItem('cart');
+
+                // Mostrar el mensaje de éxito
+                document.getElementById('mensajeExito').style.display = 'block';
+
+                // Ocultar el formulario de compra
+                document.getElementById('formularioCompra').style.display = 'none';
+
+                // Actualizar el carrito en la página
+                const cartItemsContainer = document.getElementById('cartItems');
+                cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+                document.getElementById('totalPrice').textContent = 'Total: $0.00';
+
+                // Opcional: Redirigir después de un tiempo (5 segundos, por ejemplo)
+                setTimeout(function () {
+                    window.location.href = "principal.html"; // Redirige a la página principal o donde desees
+                }, 5000); // 5 segundos
+            } else {
+                alert("Por favor, completa todos los campos.");
+            }
         }
     </script>
+
 </body>
+
 </html>
