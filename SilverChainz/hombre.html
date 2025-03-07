@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Hombre</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
@@ -12,19 +12,11 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="principal.html">
-                <img src="logo.png" alt="Logo" style="width: 150px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+     
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-light" href="principal.html">Hombre</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="mujer.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
+                <li class="nav-item"><a class="nav-link text-light" href="principal.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="mujer.html">Mujer</a></li>
+                <li class="nav-item"><a class="nav-link" href="carrito.html"><i class="fas fa-shopping-cart"></i> </a></li>                </ul>
             </div>
         </div>
     </nav>
@@ -44,33 +36,33 @@
                 <!-- Primera fila de productos -->
                 <div class="col">
                     <div class="card">
-                        <img src="collar1.jpg" class="card-img-top" alt="Collar 1">
+                        <img src="cadenaH01.jpg" class="card-img-top" alt="Collar 1">
                         <div class="card-body">
-                            <h5 class="card-title">Collar Elegante</h5>
-                            <p class="card-text">$25.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Collar Elegante', 25)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Cadena Elegante</h5>
+                            <p class="card-text">$75.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cadena Elegante', 75)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                        <img src="collar2.jpg" class="card-img-top" alt="Collar 2">
+                        <img src="cadenaH02.jpg" class="card-img-top" alt="Collar 2">
                         <div class="card-body">
-                            <h5 class="card-title">Collar de Plata</h5>
-                            <p class="card-text">$30.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Collar de Plata', 30)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Cordón de oro</h5>
+                            <p class="card-text">$300.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cordón de oro', 300)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                        <img src="collar3.jpg" class="card-img-top" alt="Collar 3">
+                        <img src="cadenaH03.jpg" class="card-img-top" alt="Collar 2">
                         <div class="card-body">
-                            <h5 class="card-title">Collar de Oro</h5>
-                            <p class="card-text">$45.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Collar de Oro', 45)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Cadena de plata y oro</h5>
+                            <p class="card-text">$110.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cadena de lata y oro', 110)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -80,33 +72,33 @@
                 <!-- Segunda fila de productos -->
                 <div class="col">
                     <div class="card">
-                        <img src="collar4.jpg" class="card-img-top" alt="Collar 4">
+                        <img src="cadenaH04.jpg" class="card-img-top" alt="Collar 2">
                         <div class="card-body">
-                            <h5 class="card-title">Collar Estilo Boho</h5>
-                            <p class="card-text">$35.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Collar Estilo Boho', 35)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Cadena de oro con diamantes</h5>
+                            <p class="card-text">$1500.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cadena de oro con diamantes', 1500)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                        <img src="collar5.jpg" class="card-img-top" alt="Collar 5">
+                        <img src="cadenaH05.jpg" class="card-img-top" alt="Collar 2">
                         <div class="card-body">
-                            <h5 class="card-title">Collar con Piedras</h5>
-                            <p class="card-text">$40.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Collar con Piedras', 40)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Cordón de plata</h5>
+                            <p class="card-text">$30.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cordón de plata', 30)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                        <img src="collar6.jpg" class="card-img-top" alt="Collar 6">
+                        <img src="cadenaH06.jpg" class="card-img-top" alt="Collar 2">
                         <div class="card-body">
-                            <h5 class="card-title">Collar de Cadenas</h5>
-                            <p class="card-text">$50.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Collar de Cadenas', 50)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Cadena de plata negro</h5>
+                            <p class="card-text">$30.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cadena de plata negro', 30)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -120,33 +112,33 @@
                 <!-- Primera fila de productos -->
                 <div class="col">
                     <div class="card">
-                        <img src="reloj1.jpg" class="card-img-top" alt="Reloj 1">
+                        <img src="relojH01.jpg" class="card-img-top" alt="Reloj 1">
                         <div class="card-body">
-                            <h5 class="card-title">Reloj de Acero</h5>
+                            <h5 class="card-title">Reloj Masserati dorado</h5>
+                            <p class="card-text">$90.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Reloj Masserati dorado', 90)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="relojH02.jpg" class="card-img-top" alt="Reloj 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Reloj Viceroy plata</h5>
+                            <p class="card-text">$70.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Reloj Viceroy plata', 70)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="relojH03.jpg" class="card-img-top" alt="Reloj 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Reloj de dorado</h5>
                             <p class="card-text">$40.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Reloj de Acero', 40)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <img src="reloj2.jpg" class="card-img-top" alt="Reloj 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Reloj Moderno</h5>
-                            <p class="card-text">$50.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Reloj Moderno', 50)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <img src="reloj3.jpg" class="card-img-top" alt="Reloj 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Reloj Clásico</h5>
-                            <p class="card-text">$60.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Reloj Clásico', 60)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-primary" onclick="addToCart('Reloj de dorado', 40)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -156,45 +148,122 @@
                 <!-- Segunda fila de productos -->
                 <div class="col">
                     <div class="card">
-                        <img src="reloj4.jpg" class="card-img-top" alt="Reloj 4">
+                        <img src="relojH04.jpg" class="card-img-top" alt="Reloj 1">
                         <div class="card-body">
-                            <h5 class="card-title">Reloj Deportivo</h5>
-                            <p class="card-text">$45.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Reloj Deportivo', 45)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Reloj elegante</h5>
+                            <p class="card-text">$40.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Reloj elegante', 40)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                        <img src="reloj5.jpg" class="card-img-top" alt="Reloj 5">
+                        <img src="relojH05.jpg" class="card-img-top" alt="Reloj 1">
                         <div class="card-body">
-                            <h5 class="card-title">Reloj de Lujo</h5>
+                            <h5 class="card-title">Reloj Jaguar</h5>
                             <p class="card-text">$80.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Reloj de Lujo', 80)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-primary" onclick="addToCart('Reloj Jaguar', 80)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                        <img src="reloj6.jpg" class="card-img-top" alt="Reloj 6">
+                        <img src="relojH06.jpg" class="card-img-top" alt="Reloj 1">
                         <div class="card-body">
-                            <h5 class="card-title">Reloj Vintage</h5>
-                            <p class="card-text">$70.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Reloj Vintage', 70)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            <h5 class="card-title">Reloj Lotus</h5>
+                            <p class="card-text">$100.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Reloj Lotus', 100)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-category">
+                <h3>Anillos</h3>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Primera fila de productos -->
+                    <div class="col">
+                        <div class="card">
+                            <img src="anilloH01.jpg" class="card-img-top" alt="Anillo 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Anillo plata Viceroy</h5>
+                                <p class="card-text">$40.00</p>
+                                <button class="btn btn-primary" onclick="addToCart('Anillo plata Viceroy', 40)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="card">
+                            <img src="anilloH02.jpg" class="card-img-top" alt="Anillo 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Sello de oro león</h5>
+                                <p class="card-text">$175.00</p>
+                                <button class="btn btn-primary" onclick="addToCart('Sello de oro león', 175)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="card">
+                            <img src="anilloH03.jpg" class="card-img-top" alt="Anillo 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Anillo oro con brillo</h5>
+                                <p class="card-text">$110.00</p>
+                                <button class="btn btn-primary" onclick="addToCart('Anillo oro con brillo', 110)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Segunda fila de productos -->
+                    <div class="col">
+                        <div class="card">
+                            <img src="anilloH04.jpg" class="card-img-top" alt="Anillo 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Anillo león con corona</h5>
+                                <p class="card-text">$40.00</p>
+                                <button class="btn btn-primary" onclick="addToCart('Anillo león con corona', 40)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="card">
+                            <img src="anilloH05.jpg" class="card-img-top" alt="Anillo 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Anillo dorado con brillo</h5>
+                                <p class="card-text">$70.00</p>
+                                <button class="btn btn-primary" onclick="addToCart('Anillo dorado con brillo', 70)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col">
+                        <div class="card">
+                            <img src="anilloH06.jpg" class="card-img-top" alt="Anillo 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Anillo virgen plata</h5>
+                                <p class="card-text">$50.00</p>
+                                <button class="btn btn-primary" onclick="addToCart('Anillo virgen plata', 50)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Tienda Online. Todos los derechos reservados.</p>
+            <p>&copy; 2025 SilverChainz. Todos los derechos reservados.</p>
+            <div class="contact-info flex-content">
+                <p>Correo: <a href="mailto:SilverChainz@gmail.com" class="text-white">SilverChainz@gmail.com</a></p>
+                <p>Número de contacto: +34 633039342</p>
+            </div>
         </footer>
 
-    </div>
+  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>

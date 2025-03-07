@@ -16,21 +16,21 @@ body {
 /* Navbar */
 .navbar {
     background-color: #333;
-    padding: 20px;
+    padding: -10px;
     position: fixed;
     width: 100%;
     
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .navbar a.navbar-brand img {
-    width: 150px;
+    width: 350px;
 }
 
 .navbar .nav-item .nav-link {
     color: white;
-    font-size: 18px;
+    font-size: 30px;
     padding: 12px 20px;
 }
 
@@ -40,7 +40,7 @@ body {
 
 /* Parallax */
 .parallax {
-    background-image: url('parallax-image.jpg'); /* Cambia la imagen de fondo */
+    background-image: url('logo.png'); /* Cambia la imagen de fondo */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
